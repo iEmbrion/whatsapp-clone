@@ -1,11 +1,12 @@
 import { Paper, Box, Typography, Avatar } from '@mui/material';
 
 const Contact = ({
+  email,
   name,
   lastMessage,
   lastTextTime,
   selected,
-  clickHandler,
+  onClick,
 }) => {
   return (
     <Paper
@@ -17,8 +18,11 @@ const Contact = ({
         padding: '1.2rem 1.8rem',
         bgcolor: selected ? '#DDDDDD' : 'white',
         cursor: 'pointer',
+        '&:hover, &:active': {
+          backgroundColor: '#DDDDDD',
+        },
       }}
-      onClick={clickHandler}
+      onClick={onClick}
     >
       <Avatar sx={{ width: 48, height: 48 }} />
       <Box

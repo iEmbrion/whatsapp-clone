@@ -1,4 +1,4 @@
-import { Box } from '@mui/material';
+import { Box, Paper } from '@mui/material';
 import Sidebar from './components/Sidebar/Sidebar';
 import Chat from './components/Chat/Chat';
 
@@ -7,20 +7,13 @@ import Chat from './components/Chat/Chat';
 function App() {
   return (
     <Box
-      sx={{
-        height: '100vh',
-        bgcolor: '#AAAAAA',
-        padding: '2rem',
-      }}
+      height="100vh"
+      bgcolor="#AAAAAA"
+      display="flex"
+      justifyContent="center"
+      alignItems="center"
     >
-      <Box
-        sx={{
-          width: '75%',
-          height: '100%',
-          display: 'flex',
-          margin: 'auto',
-        }}
-      >
+      <Box height="80%" bgcolor="red" display="flex" overflow="hidden">
         <Sidebar />
         <Chat />
       </Box>

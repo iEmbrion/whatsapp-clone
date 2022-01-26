@@ -1,45 +1,28 @@
 import React from 'react';
+import ChatHeader from './ChatHeader';
 
-import {
-  Stack,
-  Box,
-  Toolbar,
-  Avatar,
-  IconButton,
-  Typography,
-} from '@mui/material';
-
-import MoreVertIcon from '@mui/icons-material/MoreVert';
-import SearchIcon from '@mui/icons-material/Search';
+import { Stack } from '@mui/material';
+import { Box } from '@mui/system';
+import ChatBody from './ChatBody';
+import ChatFooter from './ChatFooter';
 
 const Chat = () => {
   return (
-    <Stack
+    <Box
+      bgcolor="white"
       sx={{
-        flexGrow: 1,
-        bgcolor: 'red',
+        borderLeft: '1px solid rgba(1,1,1, 0.2)',
+        width: 'inherit',
+        maxHeight: '100%',
+        height: '100%',
       }}
     >
-      <Box
-        sx={{
-          bgcolor: 'primary.main',
-        }}
-      >
-        <Toolbar sx={{ columnGap: '1.2rem' }}>
-          <Avatar
-            alt="random"
-            src="../../assets/avatars/boy-african-africa-child-47080.jpeg"
-          />
-          <Typography flexGrow={1}> Name </Typography>
-          <IconButton>
-            <SearchIcon />
-          </IconButton>
-          <IconButton>
-            <MoreVertIcon />
-          </IconButton>
-        </Toolbar>
-      </Box>
-    </Stack>
+      <Stack>
+        <ChatHeader />
+        <ChatBody />
+        <ChatFooter />
+      </Stack>
+    </Box>
   );
 };
 

@@ -1,21 +1,22 @@
 import SidebarHeader from './SidebarHeader';
 
-import { Stack } from '@mui/material';
+import { Box } from '@mui/material';
 import Searchbar from './Searchbar';
 import ContactList from './ContactList';
 
 const Sidebar = () => {
   return (
-    <Stack
-      sx={{
-        width: 1 / 4,
-        bgcolor: 'white',
-      }}
+    <Box
+      height="100%"
+      width="25%"
+      display="flex"
+      flexDirection="column"
+      bgcolor="white"
     >
       <SidebarHeader />
       <Searchbar />
       <ContactList />
-    </Stack>
+    </Box>
   );
 };
 

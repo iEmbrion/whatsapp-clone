@@ -36,7 +36,7 @@ const ContactList = () => {
   };
 
   return (
-    <Box sx={{ border: 'none', overflow: 'auto' }}>
+    <Box border="none" overflow="auto">
       {Object.entries(contactsState).map(([key, value]) => (
         <Contact
           selected={value.isSelected ? true : false}

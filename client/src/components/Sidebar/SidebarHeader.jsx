@@ -5,7 +5,7 @@ import MoreVertIcon from '@mui/icons-material/MoreVert';
 import MessageIcon from '@mui/icons-material/Message';
 const SidebarHeader = () => {
   return (
-    <Box bgcolor="primary.main" height="12%" overflow="hidden">
+    <Box>
       <Toolbar sx={{ columnGap: '0.8rem' }}>
         <Box flexGrow={1}>
           <Avatar

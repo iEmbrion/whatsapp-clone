@@ -4,13 +4,7 @@ import SearchIcon from '@mui/icons-material/Search';
 
 const ChatHeader = () => {
   return (
-    <Box
-      sx={{
-        bgcolor: 'primary.main',
-        height: '4rem',
-        maxHeight: '4rem',
-      }}
-    >
+    <Box>
       <Toolbar sx={{ columnGap: '1.2rem' }}>
         <Avatar
           alt="random"

@@ -5,12 +5,10 @@ import { Paper, Typography, Box, Avatar } from '@mui/material';
 const ChatBody = ({ messages }) => {
   return (
     <Box
-      display="flex"
-      flexDirection="column"
-      height="50.6rem"
-      maxHeight="50.6rem"
-      p={2}
       sx={{
+        display: 'flex',
+        flexDirection: 'column',
+        p: 2,
         overflowY: 'auto',
       }}
     >

@@ -1,14 +1,20 @@
-import { createTheme } from '@mui/material/styles';
+import { createTheme, responsiveFontSizes } from '@mui/material/styles';
 
-export const themeOptions = {
+//#3F3F3F sidebar search bar
+//#424242 app.js / contact bgcolor
+//#4A4A4A app.js / selected contact
+//#515151 contact onhover
+//#5A5A5A chatfooter color ?
+//#666666 chatfooter color ?
+//#CCCCCC input text color
+//#BDBDBD icons
+
+const baseThemeOptions = {
   palette: {
-    background: {
-      default: 'white',
-      paper: '#424242',
-    },
+    type: 'dark',
     primary: {
       main: '#7d67f1',
-      contrastText: '#fff',
+      contrastText: '#ccc',
       light: 'rgb(151, 133, 243)',
       dark: 'rgb(87, 72, 168)',
     },
@@ -16,13 +22,13 @@ export const themeOptions = {
       main: '#5d21ea',
       light: 'rgb(151, 133, 243)',
       dark: 'rgb(87, 72, 168)',
-      contrastText: '#fff',
+      contrastText: '#ccc',
     },
     error: {
       main: '#f44336',
       light: 'rgb(246, 104, 94)',
       dark: 'rgb(170, 46, 37)',
-      contrastText: '#fff',
+      contrastText: '#ccc',
     },
     warning: {
       main: '#ff9800',
@@ -34,7 +40,7 @@ export const themeOptions = {
       main: '#2196f3',
       light: 'rgb(77, 171, 245)',
       dark: 'rgb(23, 105, 170)',
-      contrastText: '#fff',
+      contrastText: '#ccc',
     },
     success: {
       main: '#4caf50',
@@ -81,9 +87,28 @@ export const themeOptions = {
         lineHeight: 1.57,
       },
     },
+    shape: {
+      borderRadius: 5,
+    },
+    background: {
+      default: '#303030',
+      paper: '#666666',
+    },
   },
 };
 
-const theme = createTheme(themeOptions);
+const secondaryThemeOptions = {
+  components: {
+    MuiIcon: {
+      defaultProps: {
+        color: '#1A1AAA',
+      },
+    },
+  },
+};
+
+let theme = createTheme(baseThemeOptions);
+// theme = responsiveFontSizes(theme);
+theme = createTheme(theme, secondaryThemeOptions);
 
 export default theme;

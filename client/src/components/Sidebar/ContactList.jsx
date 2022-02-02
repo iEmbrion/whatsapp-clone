@@ -1,8 +1,11 @@
 import React, { useReducer } from 'react';
 import { Box } from '@mui/material';
+import SimpleBar from 'simplebar-react';
 
 import contactListData from '../../dev-data/contactList';
 import Contact from './Contact';
+
+import '../../simplebar/simplebar.css';
 
 const contactsReducer = (state, action) => {
   if (action.type === 'SELECT') {
@@ -36,18 +39,25 @@ const ContactList = () => {
   };
 
   return (
-    <Box border="none" overflow="auto">
-      {Object.entries(contactsState).map(([key, value]) => (
-        <Contact
-          selected={value.isSelected ? true : false}
-          key={key}
-          email={key}
-          name={value.name}
-          lastMessage={value.lastMessage}
-          lastTextDate={value.lastTextTime}
-          onClick={selectContactHandler.bind(null, key)}
-        />
-      ))}
+    <Box
+      sx={{
+        border: 'none',
+        // overflow: 'auto',
+      }}
+    >
+      <SimpleBar forceVisible="y" autoHide={false}>
+        {Object.entries(contactsState).map(([key, value]) => (
+          <Contact
+            selected={value.isSelected ? true : false}
+            key={key}
+            email={key}
+            name={value.name}
+            lastMessage={value.lastMessage}
+            lastTextDate={value.lastTextTime}
+            onClick={selectContactHandler.bind(null, key)}
+          />
+        ))}
+      </SimpleBar>
     </Box>
   );
 };

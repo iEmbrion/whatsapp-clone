@@ -10,17 +10,19 @@ const Contact = ({
 }) => {
   return (
     <Paper
-      elevation={0}
+      elevation={selected ? 12 : 0}
       square
       sx={{
         display: 'flex',
         gap: '1.2rem',
         padding: '1.2rem 1.8rem',
-        bgcolor: selected ? '#DDDDDD' : 'white',
+        bgcolor: selected ? '#4A4A4A' : '#424242',
         cursor: 'pointer',
-        '&:hover, &:active': {
-          backgroundColor: '#DDDDDD',
+        '&:hover': {
+          backgroundColor: '#515151',
         },
+        color: 'white',
+        transition: 'all .3s',
       }}
       onClick={onClick}
     >

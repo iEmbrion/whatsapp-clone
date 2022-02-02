@@ -7,27 +7,32 @@ const Searchbar = () => {
   return (
     <Paper
       component="form"
+      elevation={0}
       sx={{
-        bgcolor: 'white',
+        bgcolor: '#3F3F3F',
         p: '0 0.8rem',
         display: 'flex',
         alignItems: 'center',
         borderRadius: 0,
-        borderBottom: 1,
       }}
     >
-      <InputBase
-        sx={{
-          flex: 1,
-          borderRadius: 0,
-          position: 'relative',
-        }}
-        placeholder="Search or start new chat"
-        inputProps={{ 'aria-label': 'Search or start new chat' }}
-      />
       <IconButton type="submit" sx={{ p: '10px' }} aria-label="search">
-        <SearchIcon />
+        <SearchIcon sx={{ color: '#bdbdbd' }} />
       </IconButton>
+      <InputBase
+        placeholder="Search"
+        sx={{
+          input: { color: '#CCCCCC' },
+          flexGrow: 1,
+          px: 2,
+          borderRadius: 5,
+          fontSize: 16,
+          '&:active': {
+            bgcolor: '#5A5A5A',
+            borderRadius: 5,
+          },
+        }}
+      />
     </Paper>
   );
 };

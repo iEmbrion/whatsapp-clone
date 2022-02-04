@@ -9,7 +9,7 @@ import ChatBody from './components/Chat/ChatBody';
 import ChatFooter from './components/Chat/ChatFooter';
 
 function App() {
-  const sideBarWidth = 25;
+  const sideBarWidth = 30;
 
   return (
     <Box
@@ -35,7 +35,7 @@ function App() {
           <Box width={`${sideBarWidth}%`}>
             <SidebarHeader />
           </Box>
-          <Box flexGrow="1">
+          <Box sx={{ width: '70%' }}>
             <ChatHeader />
           </Box>
         </Box>
@@ -58,7 +58,7 @@ function App() {
             light={true}
           />
 
-          <Stack width={`${sideBarWidth}%`} overflow="hidden">
+          <Stack width={`${sideBarWidth - 5}%`} overflow="hidden">
             <Searchbar />
             <Divider variant="middle" light={true} />
             <ContactList />
